@@ -7,7 +7,7 @@ const result = document.querySelector('#result');
 const renderAge = function (data, className = ''){
     const age = data?.age ?? '—';
 
-    result.innerHTML = `<div class="large-text"${className} style="font-size: 80px; align-self: center;">${age} <br> years</div>  `;
+    result.innerHTML = `<div class="large-text"${className} style="font-size: 80px; align-self: center;">${age} years</div>  `;
    result.style.opacity = 1;
 
 
