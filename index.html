@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="text.css">
 <link rel="stylesheet" href="elements.css">
+<script defer src="main.js"></script>
 </head>
 <body>
 <div class="parent">
@@ -28,11 +29,15 @@
         </aside>
     <main   class="div4">
         <div class="large-text" style="align-self: center;">Search for your name if you dare...</div>
-         <div class="search-bar"><input type="text"></div>
+         <div class="search-bar">
+             <input type="text" id="searchInput" name="searchInput">
+         </div>
     </main>
     <aside  class="div5">
          <div class="large-text" style="align-self: center; ">According to my mystical calculations, your age is…</div>
-          <div class="search-bar"></div>
+          <div class="search-bar" id="result">
+            <div class="large-text"></div>
+          </div>
     </aside>
     <footer class="div2">
         <div class="large-text">Relax… I'll only guess your age using pure magic. And maybe an API.</div>
