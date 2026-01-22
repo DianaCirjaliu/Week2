@@ -1,0 +1,29 @@
+//general
+$gradient-1: #ff6ec7;
+$gradient-2: #d66efd;
+$gradient-3: #6f6bfa;
+$gradient-4: #4adede;
+
+$card-bg: rgba(255, 255, 255, 0.25);
+$card-hover: rgba(255, 255, 255, 0.548);
+$card-radius: 30px;
+
+$shadow-lg: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+
+//for search bar
+$bg-color:  rgba(255, 255, 255, 0.527);
+$focus-outline: 3px solid rgba(98, 21, 98, 0.35);
+
+
+$gradient-text1:#360543;
+$gradient-text2:#a63ca2;
+
+$text-color:rgb(64, 12, 97);
+
+$padding-text:20px;
+
+@mixin gradient-text($from, $to) {
+  background: linear-gradient(to right, $from, $to);
+  -webkit-background-clip: text;
+  color: transparent;
+}

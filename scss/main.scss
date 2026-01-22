@@ -1,14 +1,6 @@
-//variables
-$gradient-1: #ff6ec7;
-$gradient-2: #d66efd;
-$gradient-3: #6f6bfa;
-$gradient-4: #4adede;
-
-$card-bg: rgba(255, 255, 255, 0.25);
-$card-hover: rgba(255, 255, 255, 0.548);
-$card-radius: 30px;
-
-$shadow-lg: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+@use 'variables' as *;
+@use 'components' as *;
+@use 'typography' as *;
 
 //reset layout
 *,
