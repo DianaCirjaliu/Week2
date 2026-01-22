@@ -11,24 +11,23 @@
 }
 
 .typewriter{
-  display: block;
-  text-align: center;
+  display: flex;
   font-size: 2em;
   font-weight: 900;
+  height: 1em;
+  justify-content: center;
 }
 
 .typewriter h1 {
-  display: inline-block;
+  align-self: center;
   overflow: hidden;
   white-space: nowrap;
-  width: 32ch; 
 
   border-right: 0.15em solid var(--color-1);
   letter-spacing: 0.1em;
   animation:
     typing 3.2s steps(32, end) 0s 1 both,
     blink-caret 0.75s step-end infinite;
-    
   background: linear-gradient(to right, var(--gradient-1), var(--gradient-2));
   -webkit-background-clip: text;
   color: transparent;

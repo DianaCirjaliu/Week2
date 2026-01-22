@@ -33,7 +33,7 @@ html,body {
 
 .parent {
   display: grid;
-  gap: 16px;     
+  gap: 20px;     
   padding: 16px; 
   height: 100dvh;  
   grid-template-columns: 1fr 2fr 2fr;
@@ -61,6 +61,7 @@ html,body {
       "footer";
   }
 }
+
 
 .div1,
 .div2,
