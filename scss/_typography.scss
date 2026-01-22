@@ -1,0 +1,58 @@
+@use 'variables' as *;
+
+.typewriter {
+  display: flex;
+  font-size: 2em;
+  font-weight: 900;
+  justify-content: center;
+  align-items: center;
+  margin-top: 55px;
+  width: 100%;
+
+  h1 {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+
+    border-right: 0.15em solid $text-color;
+    letter-spacing: 0.1em;
+    animation:
+      typing 3.2s steps(32, end) 0s 1 both,
+      blink-caret 0.75s step-end infinite;
+
+    @include gradient-text($gradient-text1, $gradient-text2);
+  }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 32ch; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50%      { border-color: $text-color; }
+}
+
+.small-text {
+  display: inline-block;
+  font-size: 1.1em;
+  padding: $padding-text;
+}
+
+.medium-text {
+  display: inline-block;
+  font-size: 2em;
+  color: $text-color;
+  font-weight: bolder;
+  padding: $padding-text;
+}
+
+.large-text {
+  display: inline-block;
+  font-weight: bolder;
+  @include gradient-text($gradient-text1, $gradient-text2);
+  font-size: 3em;
+  padding: $padding-text;
+  align-self: center;
+}
