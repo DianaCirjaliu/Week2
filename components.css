@@ -5,6 +5,8 @@
 
     /*shadow*/
     --shadow-lg: 0 8px 24px rgba(0,0,0,.12);
+
+    --hover:rgba(255, 255, 255, 0.548);
 }
 
 .search-bar{
@@ -38,4 +40,23 @@
 .search-bar:focus-within {
   outline: var(--focus-outline);
   outline-offset: 4px;
+}
+
+.theme-btn{
+  background: linear-gradient(to right, var(--gradient-2), var(--gradient-1));
+  border: none;
+  color: white;
+  margin: 20px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+}
+
+.theme-btn:hover{
+    background-color: var(--hover);
 }
