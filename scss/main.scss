@@ -1,0 +1,78 @@
+//variables
+$gradient-1: #ff6ec7;
+$gradient-2: #d66efd;
+$gradient-3: #6f6bfa;
+$gradient-4: #4adede;
+
+$card-bg: rgba(255, 255, 255, 0.25);
+$card-hover: rgba(255, 255, 255, 0.548);
+$card-radius: 30px;
+
+$shadow-lg: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+
+//reset layout
+*,
+*::before,
+*::after {  
+    box-sizing: border-box;
+}
+
+html,body {  
+    font-family: system-ui;  
+    background: linear-gradient(
+        135deg, 
+        $gradient-1 0%,    
+        $gradient-2 30%,    
+        $gradient-3 60%,    
+        $gradient-4 100%  );
+}
+
+@mixin card-surface{
+    box-shadow: $shadow-lg;
+    border-radius: $card-radius;
+    background-color: $card-bg;
+
+    &:hover{
+        background-color: $card-hover;
+    }
+}
+
+.parent {
+  display: grid;
+  gap: 20px;     
+  padding: 16px; 
+  height: 100dvh;  
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-areas:
+      "header header header"
+      "info   search  result"
+      "footer footer footer";
+
+}
+
+.div1 { grid-area: header; }
+.div3 { grid-area: info; }
+.div4 { grid-area: search; }
+.div5 { grid-area: result; }
+.div2 { grid-area: footer; }
+
+@media (max-width: 900px) {
+  .parent {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "search"
+      "result"
+      "info"
+      "footer";
+  }
+}
+
+
+.div1,
+.div2,
+.div3,
+.div4,
+.div5 {
+  @include card-surface;
+}
