@@ -14,12 +14,15 @@
   display: flex;
   font-size: 2em;
   font-weight: 900;
-  height: 1em;
   justify-content: center;
+  align-items: center;
+  margin-top: 55px;
+  width: 100%;
 }
 
+
 .typewriter h1 {
-  align-self: center;
+  display: inline-block;
   overflow: hidden;
   white-space: nowrap;
 
