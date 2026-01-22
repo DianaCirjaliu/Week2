@@ -9,8 +9,6 @@ const renderAge = function (data, className = ''){
 
     result.innerHTML = `<div class="large-text"${className} style="font-size: 80px; align-self: center;">${age} years</div>  `;
    result.style.opacity = 1;
-
-
 }
 
 const displayAge = function(name){
@@ -34,6 +32,5 @@ searchInput.addEventListener('keydown', function(event){
     {
         handleSearch();
     }
-
 });
 

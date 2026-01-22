@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,  /*apply this rule to all elements*/
+*::before /*all before pseudo elements*/
+*::after{ /*all after pseudo elements*/
   box-sizing: border-box;
 }
 
@@ -6,13 +8,28 @@ html,body {
   font-family: system-ui;
   background: linear-gradient(
   135deg,
-  #ff6ec7 0%,
-  #d66efd 30%,
-  #6f6bfa 60%,
-  #4adede 100%
+  var(--gradient-1) 0%,
+  var(--gradient-2) 30%,
+  var(--gradient-3) 60%,
+  var(--gradient-4) 100%
 );
 }
 
+:root{
+  /*gradient colors*/
+  --gradient-1: #ff6ec7;  
+  --gradient-2: #d66efd;  
+  --gradient-3: #6f6bfa;  
+  --gradient-4: #4adede;
+
+  /*layer card*/
+  --card-bg:rgba(255, 255, 255, 0.25);
+  --card-hover:rgba(255, 255, 255, 0.548);
+  --card-radius: 30px;
+
+  /*shadow*/
+  --shadow-lg:0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+}
 
 .parent {
   display: grid;
@@ -45,18 +62,21 @@ html,body {
   }
 }
 
-.div1,.div2,.div3,.div4,.div5{
-    box-shadow:  0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0.254);
+.div1,
+.div2,
+.div3,
+.div4,
+.div5 {
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--card-radius);
+  background-color: var(--card-bg);
 }
-
 
 .div1:hover,
 .div2:hover,
 .div3:hover,
 .div4:hover,
 .div5:hover {
-  background-color: rgba(255, 255, 255, 0.548);
+  background-color: var(--card-hover);
 }
 
