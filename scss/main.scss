@@ -24,8 +24,12 @@ html,body {
     border-radius: $card-radius;
     background-color: $card-bg;
 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+
     &:hover{
         background-color: $card-hover;
+        transform: translateY(-5px);
     }
 }
 
